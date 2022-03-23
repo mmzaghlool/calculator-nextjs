@@ -28,7 +28,6 @@ class FirebaseApp {
 
   // Initialize Firebase
   constructor() {
-    console.log(firebaseConfig);
     const apps = getApps();
 
     if (apps.length > 0) {
@@ -38,8 +37,6 @@ class FirebaseApp {
     }
 
     isSupported().then((supported) => {
-      console.log('supported', supported);
-
       if (supported === true) {
         this._analytics = getAnalytics(this._app);
       }

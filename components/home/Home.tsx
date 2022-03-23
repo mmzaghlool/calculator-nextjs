@@ -39,13 +39,21 @@ const ReadMore = () => {
       <h3>أقرأ المزيد</h3>
       <ul>
         <li>
-          <a href="https://binbaz.org.sa/categories/fiqhi/75" target="_blank" rel="noreferrer">
+          <a
+            href="https://binbaz.org.sa/categories/fiqhi/75"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => FirebaseApp.analytics().logEvent('External link: binbaz.org')}>
             إخراج الزكاه و أهلها: الموقع الرسمي للشيخ الإمام ابن الباز
           </a>
         </li>
 
         <li>
-          <a href="https://www.masrawy.com/gold" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.masrawy.com/gold"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => FirebaseApp.analytics().logEvent('External link: masrawy.com')}>
             سعر الذهب اليوم من مصراوي
           </a>
         </li>
