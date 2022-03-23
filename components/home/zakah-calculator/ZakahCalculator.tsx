@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
-import { FormEvent, FormEventHandler, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { FormControl, FormGroup, FormLabel, Button, Form } from 'react-bootstrap';
+import FirebaseApp from '../../../config/FirebaseApp';
 
 import styles from './ZakahCalculator.module.scss';
 
@@ -11,6 +12,7 @@ const ZakahCalculator: NextPage = () => {
 
   const calculate = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    FirebaseApp.analytics().logEvent('Zakah');
 
     const valid = validatePrice(amount);
     setIsValid(valid);

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
-import { FormEvent, FormEventHandler, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { FormControl, FormGroup, FormLabel, Button, Form } from 'react-bootstrap';
+import FirebaseApp from '../../../config/FirebaseApp';
 
 import styles from './NisabCalculator.module.scss';
 
@@ -9,8 +10,13 @@ const NisabCalculator: NextPage = () => {
   const [price, setPrice] = useState('');
   const [nisab, setNisab] = useState(0);
 
+  // useEffect(() => {
+  //   FirebaseApp.analytics().screenView('Home');
+  // }, []);
+
   const calculate = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    FirebaseApp.analytics().logEvent('Nesab');
 
     const valid = validatePrice(price);
     setIsValid(valid);

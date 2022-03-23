@@ -7,17 +7,17 @@ import styles from './Home.module.scss';
 import Hero from './hero/Hero';
 import NisabCalculator from './nisab-calculator/NisabCalculator';
 import ZakahCalculator from './zakah-calculator/ZakahCalculator';
+import { useEffect } from 'react';
+import FirebaseApp from '../../config/FirebaseApp';
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    FirebaseApp.analytics().screenView('Home');
+  }, []);
+
   return (
     <div className="main">
-      {/* Head */}
-      <Head
-        title={'Software Engineer'}
-        meta={`A passionate Software engineer,
-        Having experience building Web and Mobile applications with JS/TS, React, React Native, NextJS, and NodeJS`}
-      />
-      {/* <NavBar /> */}
+      <Head />
 
       <div className={styles.container}>
         <Hero />
