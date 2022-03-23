@@ -33,14 +33,14 @@ class FirebaseApp {
 
     if (apps.length > 0) {
       this._app = apps[0];
-    } else if (NEXT_PUBLIC_API_KEY !== undefined) {
+    } else {
       this._app = initializeApp(firebaseConfig);
     }
 
     isSupported().then((supported) => {
       console.log('supported', supported);
 
-      if (supported === true && this._app !== undefined) {
+      if (supported === true) {
         this._analytics = getAnalytics(this._app);
       }
     });
@@ -61,7 +61,5 @@ class FirebaseApp {
     };
   }
 }
-
-const app = new FirebaseApp();
 
 export default new FirebaseApp();
