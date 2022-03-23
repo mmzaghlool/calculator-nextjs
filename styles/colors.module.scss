@@ -1,0 +1,12 @@
+@function getShadow($color) {
+  @return rgba($color, 0.15);
+}
+
+// $bg1: #0a0a0a;
+// $bg2: #2f2f37;
+$bg1: var(--bs-light);
+// $bg2: var(--bs-purple);
+$bg2: #193043;
+
+$bg1-shadow: getShadow($bg1);
+$bg2-shadow: getShadow($bg2);

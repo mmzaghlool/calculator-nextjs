@@ -1,0 +1,24 @@
+@import '/styles/screenSizes.module.scss';
+@import '/styles/colors.module.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .input {
+    width: 20rem;
+    max-width: 100%;
+  }
+
+  .submit {
+    background-color: $bg2;
+    margin-top: 1rem;
+  }
+
+  .nisab {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+}

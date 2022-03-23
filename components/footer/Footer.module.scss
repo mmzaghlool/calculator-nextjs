@@ -1,0 +1,25 @@
+@import '/styles/colors.module.scss';
+@import '/styles/screenSizes.module.scss';
+
+.footer {
+  background-color: $bg2;
+  box-shadow: 0 0 0 0.25rem $bg2-shadow;
+
+  .content {
+    padding: 0.7rem 0;
+    width: 90%;
+    direction: rtl;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $max-width;
+    margin: auto;
+
+    p,
+    .name {
+      color: white;
+      margin: 0;
+    }
+  }
+}

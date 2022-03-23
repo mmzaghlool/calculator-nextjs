@@ -1,0 +1,17 @@
+@import '/styles/screenSizes.module.scss';
+
+.title-container {
+  direction: rtl;
+  align-self: flex-start;
+  width: 38rem;
+  max-width: 100%;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  p {
+    margin: 2rem 0 0;
+  }
+}
