@@ -2,7 +2,7 @@ import NHead from 'next/head';
 
 type P = { title: string; meta: string };
 
-export default function Head({}) {
+function Head() {
   return (
     <NHead>
       <title>حاسبة الزكاه و نصاب الزكاه</title>
@@ -16,3 +16,5 @@ export default function Head({}) {
     </NHead>
   );
 }
+
+export default Head;
