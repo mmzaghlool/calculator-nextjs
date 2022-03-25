@@ -22,7 +22,7 @@ const NisabCalculator: NextPage = () => {
     setIsValid(valid);
 
     if (valid === true) {
-      setNisab(28 * Number(price));
+      setNisab(85 * Number(price));
     }
   };
 
