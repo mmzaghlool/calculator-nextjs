@@ -10,10 +10,6 @@ const NisabCalculator: NextPage = () => {
   const [price, setPrice] = useState('');
   const [nisab, setNisab] = useState(0);
 
-  // useEffect(() => {
-  //   FirebaseApp.analytics().screenView('Home');
-  // }, []);
-
   const calculate = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     FirebaseApp.analytics().logEvent('Nesab');
@@ -30,16 +26,16 @@ const NisabCalculator: NextPage = () => {
     <div className={styles.container}>
       <h3>احسب قيمة النصاب</h3>
       <ul>
-        <li>مقدار نصاب الذهب عيار ٢٤ هو: ٨٥ جرام</li>
+        <li>مقدار نصاب الذهب عيار ٢١ هو: ٨٥ جرام</li>
         <li>مقدار نصاب الفضة هو: ٥٩٥ جرام</li>
       </ul>
       <Form onSubmit={calculate}>
         <FormGroup>
-          <FormLabel className={styles.label}>سعر جرام الذهب عيار ٢٤</FormLabel>
+          <FormLabel className={styles.label}>سعر جرام الذهب عيار ٢١</FormLabel>
           <FormControl
             type="number"
             className={styles.input}
-            placeholder={'سعر جرام الذهب عيار ٢٤'}
+            placeholder={'سعر جرام الذهب عيار ٢١'}
             isInvalid={!isValid}
             value={price}
             onChange={(e) => setPrice(e.target.value)}
